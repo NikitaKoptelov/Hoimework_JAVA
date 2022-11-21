@@ -7,12 +7,11 @@
 //  
 //  Решение:
 
-import java.lang.reflect.Array;
+
 import java.util.Scanner;
 public class task_004 {
     static void geet_num(int num, String iskom_sum){
         String nabor_numb = "";
-        String rezultat_num = "";
         int count=0;
         int count_pousk = 0;
         int number_1 = 0;
@@ -32,14 +31,18 @@ public class task_004 {
 
         for(int j=0; j<array_sum_num.length; j++){
             String poisc_sum = array_sum_num[j];
-            for(int l = 0; l<=poisc_sum.length(); l++){
-                if(new String(poisc_sum.substring(l)).equals(iskom_sum.substring(l))){
-                    count_pousk++;
-                    if(count_pousk>=2){
-                        System.out.println(poisc_sum);
+            if(poisc_sum.length()>=iskom_sum.length()){
+                for(int l = 0; l<iskom_sum.length(); l++){
+                    if(poisc_sum.charAt(l)==iskom_sum.charAt(l)){
+                        // System.out.println(poisc_sum.charAt(l) +"===="+iskom_sum.charAt(l));
+                        count_pousk++;
+                        if(count_pousk>=3){
+                            System.out.println(poisc_sum+"="+num);
+                        }
                     }
                 }
             }
+            poisc_sum = "";
             count_pousk=0;
         }
     }

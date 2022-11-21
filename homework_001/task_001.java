@@ -4,8 +4,6 @@
 //  Решение:
 
 
-package Honework_JAVA.homework_001;
-
 import java.util.Scanner;
 
 public class task_001 {
